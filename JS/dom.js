@@ -27,11 +27,21 @@ console.log(document.links);
 
 // console.log(document.getElementById('header-title'));
 // same as above 
- var headerTitle = document.getElementById('header-title');
- console.log(headerTitle);
+//   var headerTitle = document.getElementById('header-title');
 
-  // change header content
+//  console.log(headerTitle);
+
+  // ====== change header content
 //  headerTitle.textContent = 'hello';
 //  headerTitle.innerHTML = 'Goodbye';
- console.log(headerTitle.textContent);
-headerTitle.innerHTML = '<h3> Hello </h3>';
+//  console.log(headerTitle.textContent);
+// headerTitle.innerHTML = '<h3> Hello </h3>';
+
+
+//======= apply style =====
+
+var headerTitle = document.getElementById('header-title');
+var header = document.getElementById('main-header');
+
+headerTitle.style.borderBottom = 'solid 4px #000';
+header.style.borderBottom = 'solid 4px #ff0';
