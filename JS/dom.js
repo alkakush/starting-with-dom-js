@@ -25,12 +25,13 @@ console.log(document.links);
 
 //==== GETELEMENTBYID ======//
 
-console.log(document.getElementById('header-title'));
+// console.log(document.getElementById('header-title'));
 // same as above 
  var headerTitle = document.getElementById('header-title');
  console.log(headerTitle);
 
   // change header content
- headerTitle.textContent = 'hello';
- headerTitle.innerHTML = 'Goodbye';
-
+//  headerTitle.textContent = 'hello';
+//  headerTitle.innerHTML = 'Goodbye';
+ console.log(headerTitle.textContent);
+headerTitle.innerHTML = '<h3> Hello </h3>';
