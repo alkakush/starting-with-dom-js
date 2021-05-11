@@ -10,5 +10,13 @@ console.log(document.head);
 console.log(document.body);
 */
 
- console.log(document.all);
- console.log(document.all[10]);
+//  console.log(document.all);
+//  console.log(document.all[10]);
+
+// EXAMINE THE DOCUMENT OBJECT BYE SELECTOR
+
+// document.all[10].textContent = 'Hello';
+
+console.log(document.forms);
+console.log(document.forms[0]);
+console.log(document.links);
