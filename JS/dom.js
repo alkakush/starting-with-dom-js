@@ -104,6 +104,7 @@ secondItem.style.color = 'coral';
 
 
 // ==================== QUERYSELECTORALL =================================
+/*
 var titles = document.querySelectorAll('.title');
 
 console.log(titles);
@@ -117,3 +118,14 @@ for(var i = 0; i < odd.length; i++){
     odd[i].style.color = 'white';
     even[i].style.color = 'white';
 }
+*/
+
+// ============================== TRAVERSING  THE  DOM =============================
+
+var itemList = document.querySelector('#items');
+/* parentNode */
+
+console.log(itemList.parentNode);
+itemList.parentNode.style.backgroundColor = '#f4f4f4';
+console.log(itemList.parentNode.parentNode);
+console.log(itemList.parentNode.parentNode.parentNode);
