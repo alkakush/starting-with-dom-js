@@ -122,10 +122,17 @@ for(var i = 0; i < odd.length; i++){
 
 // ============================== TRAVERSING  THE  DOM =============================
 
-var itemList = document.querySelector('#items');
-/* parentNode */
+// var itemList = document.querySelector('#items');
+// parentNode  //
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentNode.parentNode);
+// console.log(itemList.parentNode.parentNode.parentNode);
 
-console.log(itemList.parentNode);
-itemList.parentNode.style.backgroundColor = '#f4f4f4';
-console.log(itemList.parentNode.parentNode);
-console.log(itemList.parentNode.parentNode.parentNode);
+
+var itemList = document.querySelector('#items');
+// parentElement //
+console.log(itemList.parentElement);
+itemList.parentElement.style.backgroundColor = '#5f5050';
+console.log(itemList.parentElement.parentElement);
+console.log(itemList.parentElement.parentElement.parentElement);
