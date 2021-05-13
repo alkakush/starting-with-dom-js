@@ -160,17 +160,47 @@ for(var i = 0; i < odd.length; i++){
 // console.log(itemList.lastElementChild); 
 // itemList.lastElementChild.textContent = 'Hello 2'; 
 
-// ====================== Sibling ==========================
+// ====================== Sibling ========================== 
 
-var itemList = document.querySelector('#items');
-//nextSibling //
-console.log(itemList.nextSibling);
+// var itemList = document.querySelector('#items');
+// //nextSibling //
+// console.log(itemList.nextSibling);
 
-//nextElementSibling
-console.log(itemList.nextElementSibling);
+// //nextElementSibling
+// console.log(itemList.nextElementSibling);
 
-//previousSibling
-console.log(itemList.previousSibling);
-//perviousElementSibling
-console.log(itemList.previousElementSibling);
-itemList.previousElementSibling.style.color = 'green';
+// //previousSibling
+// console.log(itemList.previousSibling);
+// //perviousElementSibling
+// console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color = 'green';
+
+// ===================== Create Element  and Insert values  =======================
+
+//createElement
+
+//create a div
+var newDiv = document.createElement('div');
+
+// Add class
+newDiv.className = 'hello';
+
+// Add id
+newDiv.id = 'hello1';
+
+// Add Attribute
+newDiv.setAttribute('title' ,  'Hello Div');
+
+// Create text Node
+var newDivText = document.createTextNode('Hello World !');
+
+// Add text to div
+newDiv.appendChild(newDivText);
+
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+
+console.log(newDiv);
+
+newDiv.style.fontSize = '30px';
+container.insertBefore(newDiv , h1);
