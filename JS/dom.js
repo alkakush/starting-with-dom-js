@@ -179,28 +179,55 @@ for(var i = 0; i < odd.length; i++){
 
 //createElement
 
-//create a div
-var newDiv = document.createElement('div');
+// //create a div
+// var newDiv = document.createElement('div');
 
-// Add class
-newDiv.className = 'hello';
+// // Add class
+// newDiv.className = 'hello';
 
-// Add id
-newDiv.id = 'hello1';
+// // Add id
+// newDiv.id = 'hello1';
 
-// Add Attribute
-newDiv.setAttribute('title' ,  'Hello Div');
+// // Add Attribute
+// newDiv.setAttribute('title' ,  'Hello Div');
 
-// Create text Node
-var newDivText = document.createTextNode('Hello World !');
+// // Create text Node
+// var newDivText = document.createTextNode('Hello World !');
 
-// Add text to div
-newDiv.appendChild(newDivText);
+// // Add text to div
+// newDiv.appendChild(newDivText);
 
-var container = document.querySelector('header .container');
-var h1 = document.querySelector('header h1');
+// var container = document.querySelector('header .container');
+// var h1 = document.querySelector('header h1');
 
-console.log(newDiv);
+// console.log(newDiv);
 
-newDiv.style.fontSize = '30px';
-container.insertBefore(newDiv , h1);
+// newDiv.style.fontSize = '30px';
+// container.insertBefore(newDiv , h1);
+
+//================= Events ================================
+
+//==== Click  Event listner ===//
+
+var button = document.getElementById('button').addEventListener('click', buttonclick);
+    
+function buttonclick(e){
+console.log('Button clicked');
+  document.getElementById('header-title').textContent = 'Changed';   /* change header content when button is clicked */
+  document.querySelector('#main').style.backgroundColor = 'coral'; 
+
+  console.log(e.type);
+  console.log(e);
+  console.log(e.target); /* gives actual element that was clicked */
+  console.log(e.target.id);
+  console.log(e.target.className);
+  console.log(e.target.classList);
+ 
+  console.log(e.clientX);
+  console.log(e.clientY);
+
+  console.log(e.altKey);
+  console.log(e.ctrlKey);
+  console.log(e.shiftKey);
+
+}
