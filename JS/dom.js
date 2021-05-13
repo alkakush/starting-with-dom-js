@@ -122,17 +122,40 @@ for(var i = 0; i < odd.length; i++){
 
 // ============================== TRAVERSING  THE  DOM =============================
 
-// var itemList = document.querySelector('#items');
 // parentNode  //
+// var itemList = document.querySelector('#items');
+
 // console.log(itemList.parentNode);
 // itemList.parentNode.style.backgroundColor = '#f4f4f4';
 // console.log(itemList.parentNode.parentNode);
 // console.log(itemList.parentNode.parentNode.parentNode);
 
-
-var itemList = document.querySelector('#items');
 // parentElement //
-console.log(itemList.parentElement);
-itemList.parentElement.style.backgroundColor = '#5f5050';
-console.log(itemList.parentElement.parentElement);
-console.log(itemList.parentElement.parentElement.parentElement);
+// var itemList = document.querySelector('#items');
+
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor = '#5f5050';
+// console.log(itemList.parentElement.parentElement);
+// console.log(itemList.parentElement.parentElement.parentElement);
+
+// childNodes //
+var itemList = document.querySelector('#items');
+
+console.log(itemList.childNodes);
+
+console.log(itemList.children);
+console.log(itemList.children[1]);
+itemList.children[1].style.backgroundColor =  'yellow';
+// firstChild
+console.log(itemList.firstChild); 
+
+// firstElementChild
+console.log(itemList.firstElementChild); 
+itemList.firstElementChild.textContent = 'Hello';
+
+// lastChild
+console.log(itemList.lastChild); 
+
+// lastElementChild
+console.log(itemList.lastElementChild); 
+itemList.lastElementChild.textContent = 'Hello 2';
