@@ -14,7 +14,7 @@ itemList.addEventListener('click', removeItem);
 function addItem(e){
     e.preventDefault();
 
-    console.log(1);
+    // console.log(1);
 
     // get input value
     var newItem = document.getElementById('item').value;
@@ -56,4 +56,35 @@ function removeItem(e){
     }
 
     // console.log(1);
+}
+
+// =================  Apply filter Event =========== //
+
+var filter = document.getElementById('filter');
+
+
+// filter event
+filter.addEventListener('keyup', filterItems);
+
+// create function for filter item 
+function filterItems(e){
+    // converts text to lowercase
+    var text = e.target.value.toLowerCase();
+
+    // Get li
+    var items = itemList.getElementsByTagName('li');
+    // console.log(items);
+
+    // Convert to an array   
+    Array.from(items).forEach(function(item){
+       var itemName = item.firstChild.textContent;
+       // equal to search item
+       if(itemName.toLowerCase().indexOf(text) != -1){
+        item.style.display = 'block';
+       } else{
+           item.style.display = 'none';
+       }
+       //   console.log(itemName);
+    });
+    // console.log(text);
 }
