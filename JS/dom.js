@@ -233,26 +233,52 @@ for(var i = 0; i < odd.length; i++){
 
 // === Mouse Event Listener ======= //
 
-var button = document.getElementById('button');
-var box = document.getElementById('box');
+// var button = document.getElementById('button');
+// var box = document.getElementById('box');
 
-button.addEventListener('click', runEvent);
-// button.addEventListener('dblclick', runEvent);
-// button.addEventListener('mousedown', runEvent);
-// button.addEventListener('mouseup', runEvent);
+// button.addEventListener('click', runEvent);
+// // button.addEventListener('dblclick', runEvent);
+// // button.addEventListener('mousedown', runEvent);
+// // button.addEventListener('mouseup', runEvent);
 
-box.addEventListener('mouseenter', runEvent);
-// box.addEventListener('mouseleave', runEvent);
+// box.addEventListener('mouseenter', runEvent);
+// // box.addEventListener('mouseleave', runEvent);
 
-box.addEventListener('mouseover', runEvent);
-// box.addEventListener('mouseout', runEvent);
+// box.addEventListener('mouseover', runEvent);
+// // box.addEventListener('mouseout', runEvent);
 
-box.addEventListener('mousemove', runEvent);
+// box.addEventListener('mousemove', runEvent);
+
+// function runEvent(e){
+//  console.log('EVENT TYPE: '+e.type);
+ 
+// //  output.innerHtml = '<h3>MouseX: '+e.offsetX+'</h3><h3>MouseY: '+e.offsetY+'</h3>';
+
+// box.style.backgroundColor = "rgb( "+e.offsetX+", "+e.offsetY+", 40)";
+// }
+
+// ========== Keyboard Input Event ============ //
+
+var itemInput = document.querySelector('input[type="text"]');
+var form = document.querySelector('form');
+var select =document.querySelector('select');
+
+// itemInput.addEventListener('keydown', runEvent);
+// itemInput.addEventListener('keyup', runEvent);
+itemInput.addEventListener('keypress', runEvent);
+
+itemInput.addEventListener('focus', runEvent);
+itemInput.addEventListener('blur', runEvent);
+// itemInput.addEventListener('input', runEvent);
+
+select.addEventListener('change',runEvent);
+
+form.addEventListener('submit', runEvent);
 
 function runEvent(e){
- console.log('EVENT TYPE: '+e.type);
- 
-//  output.innerHtml = '<h3>MouseX: '+e.offsetX+'</h3><h3>MouseY: '+e.offsetY+'</h3>';
+  e.preventDefault();
+  console.log('EVENT TYPE: '+e.type);
 
-box.style.backgroundColor = "rgb( "+e.offsetX+", "+e.offsetY+", 40)";
+  console.log(e.target.value);
+  // document.getElementById('input').innerHTML = '<h3>'+e.target.value+'</h3>';
 }
