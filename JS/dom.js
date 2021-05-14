@@ -209,25 +209,50 @@ for(var i = 0; i < odd.length; i++){
 
 //==== Click  Event listner ===//
 
-var button = document.getElementById('button').addEventListener('click', buttonclick);
+// var button = document.getElementById('button').addEventListener('click', buttonclick);
     
-function buttonclick(e){
-console.log('Button clicked');
-  document.getElementById('header-title').textContent = 'Changed';   /* change header content when button is clicked */
-  document.querySelector('#main').style.backgroundColor = 'coral'; 
+// function buttonclick(e){
+// console.log('Button clicked');
+//   document.getElementById('header-title').textContent = 'Changed';   /* change header content when button is clicked */
+//   document.querySelector('#main').style.backgroundColor = 'coral'; 
 
-  console.log(e.type);
-  console.log(e);
-  console.log(e.target); /* gives actual element that was clicked */
-  console.log(e.target.id);
-  console.log(e.target.className);
-  console.log(e.target.classList);
+//   console.log(e.type);
+//   console.log(e);
+//   console.log(e.target); /* gives actual element that was clicked */
+//   console.log(e.target.id);
+//   console.log(e.target.className);
+//   console.log(e.target.classList);
  
-  console.log(e.clientX);
-  console.log(e.clientY);
+//   console.log(e.clientX);
+//   console.log(e.clientY);
 
-  console.log(e.altKey);
-  console.log(e.ctrlKey);
-  console.log(e.shiftKey);
+//   console.log(e.altKey);
+//   console.log(e.ctrlKey);
+//   console.log(e.shiftKey);
+// }
 
+// === Mouse Event Listener ======= //
+
+var button = document.getElementById('button');
+var box = document.getElementById('box');
+
+button.addEventListener('click', runEvent);
+// button.addEventListener('dblclick', runEvent);
+// button.addEventListener('mousedown', runEvent);
+// button.addEventListener('mouseup', runEvent);
+
+box.addEventListener('mouseenter', runEvent);
+// box.addEventListener('mouseleave', runEvent);
+
+box.addEventListener('mouseover', runEvent);
+// box.addEventListener('mouseout', runEvent);
+
+box.addEventListener('mousemove', runEvent);
+
+function runEvent(e){
+ console.log('EVENT TYPE: '+e.type);
+ 
+//  output.innerHtml = '<h3>MouseX: '+e.offsetX+'</h3><h3>MouseY: '+e.offsetY+'</h3>';
+
+box.style.backgroundColor = "rgb( "+e.offsetX+", "+e.offsetY+", 40)";
 }
